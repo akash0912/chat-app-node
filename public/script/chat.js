@@ -57,7 +57,7 @@ socket.on("locationMessage",(message)=>{
     createdAt: moment(message.createdAt).format("hh:mm a"),
   });
   $messages.insertAdjacentHTML('beforeend',html)
-  
+  autoscroll();
 })
 
 socket.on('roomData',({room, users})=>{
